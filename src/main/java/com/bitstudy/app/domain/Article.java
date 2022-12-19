@@ -1,7 +1,17 @@
 package com.bitstudy.app.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+import javax.persistence.Entity;
 import java.time.LocalDateTime;
 
+
+@Getter
+@Setter
+@ToString
+@Entity
 public class Article {
 
     private Long id;
