@@ -24,7 +24,7 @@ import java.time.LocalDateTime;
         @Index(columnList = "createdAt"),
         @Index(columnList = "createdBy"),
 })
-public class ArticleComment {
+public class Ex01_2_ArticleComment_엔티티로_변경 {
 
 
 
@@ -33,8 +33,7 @@ public class ArticleComment {
     private Long id;
 
 
-    @Setter
-    @ManyToOne(optional = false) private  Article articleId;
+    @Setter @ManyToOne(optional = false) private  Article articleId;
     //private Article article;
     /*
     연관관계 매핑

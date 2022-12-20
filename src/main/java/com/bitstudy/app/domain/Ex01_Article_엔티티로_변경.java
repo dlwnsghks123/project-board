@@ -10,9 +10,7 @@ import org.springframework.data.annotation.LastModifiedDate;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.LinkedHashSet;
 import java.util.Objects;
-import java.util.Set;
 
 
 // @Table - 엔티티와 매핑할 정보를 지정하고, 사용법) @Index(name="원하는명칭",  columnList = "사용할 테이블명")
@@ -31,7 +29,7 @@ import java.util.Set;
 
 
 @ToString
-public class Article {
+public class Ex01_Article_엔티티로_변경 {
 
     @Id //전체 필드중에서 이게 PK다 라고 말해주는거 @Id 가 없으면 @Entity 에서 에러
     @GeneratedValue(strategy = GenerationType.IDENTITY) // 해당 필드가 auto_increment 인 경우 자동값이 생성되게 해줘야함
@@ -51,30 +49,10 @@ public class Article {
 
 
 
-
-
-
-    /* 양방향 바인딩
+    /*
     *
     *
     * */
-
-    @OrderBy("id") //양방향 바인딩을 할건데 정렬 기준을 id로 하겠다는 뜻
-    @OneToMany(mappedBy = "article", cascade = CascadeType.ALL)
-    @ToString.Exclude // 이거 중요. 맨위에 @ToString 이 있는데 마우스 올려보면 '@ToString includes ~ 이런거 나오는데
-    // 이거는 퍼포먼스, 메모리를 저하 시키기 때문에 성능적으로 안좋은 영향을 줄수있따. 해당 필드를 가려주세요 하는것
-
-    private  final Set<ArticleComment> articleComments = new LinkedHashSet<>();
-
-    // @ToString.Exclude 이걸 안해주면 순환참조 이슈가 생길수있다.
-    // 여기서 ToString 이 id, title, content, hashtag 다 찍고 Set<ArticleComment> 부분을찍으려고하는데
-    // ArticleComment.java 파일에 가서 거기 있는 @ToString 이 원소들 다 찍으려고 하면서 원소들 중에
-    // private  Article articleId; 을 보는순간 다시 Article 의 @ToString이 동작하면서 또 원소들을
-    //찍으려고 하고, 그러다가 다시 Set<ArticleCommnet>를 보고 또 ArticleCommnet로 가서 toString돌리고
-    // .. 이런식으로 동작하면서 메모리가 터질수있다. 그래서 Set<ArticleCommnet> 에 @ToString.Exclude을 달아준다
-
-    // ArticleCommnet 에 걸지 않고 Article에 걸어주는 이유는 댓글이 글에 참조하는건 정상적인 경우인데,
-    // 반대로 글이 댓글을 참조하는건 일반적인 경우는 아니기 때문에 Article에 exclude를 걸어준다.
 
 
 
@@ -124,22 +102,22 @@ public class Article {
     // Entity 를 만들때는 무조건 기본 생성자가 필요하다.
     // public 또는 protected 만 가능한데, 평생 아무데서도 기본생성자를 안쓰이게 하고 싶어서 protected로 변경함
 
-    protected Article(){}
+    protected Ex01_Article_엔티티로_변경(){}
 
 
     /**
      *사용자가 입력하는 값만 받기 나머지는 시스템이 알아서 하게 해주면됨
      *
     * */
-    private Article(String title, String content, String hashtag) {
+    private Ex01_Article_엔티티로_변경(String title, String content, String hashtag) {
         this.title = title;
         this.content = content;
         this.hashtag = hashtag;
     }
 
-    public static Article of(String title, String content, String hashtag){
+    public static Ex01_Article_엔티티로_변경 of(String title, String content, String hashtag){
 
-        return new Article(title, content, hashtag);
+        return new Ex01_Article_엔티티로_변경(title, content, hashtag);
     }
     /* 정적 팩토리 매서드 (factory method pattern 중에 하나)
     * 정적 팩토리 메서드란 객체 생성 역할을 하는 클래스 메서드 라는 뜻.
@@ -183,7 +161,7 @@ public class Article {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Article article = (Article) o;
+        Ex01_Article_엔티티로_변경 article = (Ex01_Article_엔티티로_변경) o;
         return id.equals(article.id);
     }
 
