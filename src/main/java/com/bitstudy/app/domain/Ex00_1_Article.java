@@ -11,6 +11,8 @@ public class Ex00_1_Article {
 
     // 메타데이터
 
-    private LocalDateTime;
-
+    private LocalDateTime createdAt;
+    private String createdBy;
+    private LocalDateTime modifiedAt;
+    private String modifiedBt;
 }

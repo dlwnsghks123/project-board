@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42ca11bd-9ef3-4a68-a0b7-ff012e70548a" name="Changes" comment="Changes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bitstudy/app/config/JpaConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bitstudy/app/domain/Ex01_2_ArticleComment_엔티티로_변경.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bitstudy/app/domain/Ex01_Article_엔티티로_변경.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bitstudy/app/domain/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bitstudy/app/domain/Article.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bitstudy/app/domain/ArticleComment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bitstudy/app/domain/ArticleComment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bitstudy/app/domain/Ex00_1_Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bitstudy/app/domain/Ex00_1_Article.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -212,7 +204,7 @@
       <workItem from="1671449061628" duration="3409000" />
       <workItem from="1671452948959" duration="881000" />
       <workItem from="1671453893586" duration="499000" />
-      <workItem from="1671518406701" duration="15132000" />
+      <workItem from="1671518406701" duration="15971000" />
     </task>
     <servers />
   </component>
